@@ -73,7 +73,7 @@ mkdir -p "$GOPATH/src/github.com/joelfischerr"
 cd "$GOPATH/src/github.com/joelfischerr"
 git clone https://github.com/joelfischerr/scion scion
 cd scion
-echo 'export SC="$HOMEPATH/go/src/github.com/joelfischerr/scion"' >> ~/.profile
+echo 'export SC="go/src/github.com/joelfischerr/scion"' >> ~/.profile
 
 echo '6. Install required packages with dependencies:'
 
