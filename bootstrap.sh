@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
+
+export DEBIAN_FRONTEND=noninteractive
+
+
 sudo apt-get update
+sudo apt upgrade -y
 sudo apt-get -y install clang llvm make gcc
 
 # Golang installation variables
@@ -71,13 +76,11 @@ echo 'Cloning into $GOPATH/src/github.com/joelfischerr'
 
 mkdir -p "$GOPATH/src/github.com/joelfischerr"
 cd "$GOPATH/src/github.com/joelfischerr"
-git clone https://github.com/joelfischerr/scion scion
+git clone --single-branch --branch auto-install https://github.com/joelfischerr/scion scion
 cd scion
 echo 'export SC="go/src/github.com/joelfischerr/scion"' >> ~/.profile
 
 echo '6. Install required packages with dependencies:'
-
-sudo apt-get -y install cgroup-tools dh-python libcapnp-0.6.1 libcgroup1 libexpat1 libexpat1-dev libio-pty-perl libipc-run-perl libjq1 libjs-jquery libjs-jquery-metadata libjs-sphinxdoc libjs-underscore libonig4 libopts25 libpython3-dev libpython3.6 libpython3.6-dev libpython3.6-minimal libpython3.6-stdlib libsodium23 libsqlite3-0 python-configparser python-enum34 python-mccabe python-pip-whl python-pkg-resources python-pycodestyle python-pyflakes python3-cov-core python3-distutils python3-flake8 python3-lib2to3 python3-mccabe python3-nose2 python3-pycodestyle python3-pyflakes python3.6 python3.6-dev python3.6-minimal
 
 ls
 
@@ -142,6 +145,8 @@ touch "$HOMEPATH/.bashrc"
 } >> "$HOMEPATH/.bashrc"
 
 echo 'Finished setup'
+
+echo 'You still have to run ./env/deps in scion'
 
 # cd $SC
 
