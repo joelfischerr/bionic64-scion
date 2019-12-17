@@ -76,7 +76,7 @@ echo 'Cloning into $GOPATH/src/github.com/joelfischerr'
 
 mkdir -p "$GOPATH/src/github.com/joelfischerr"
 cd "$GOPATH/src/github.com/joelfischerr"
-git clone --single-branch --branch auto-install https://github.com/joelfischerr/scion scion
+git clone --single-branch --branch jf-scionproto https://github.com/joelfischerr/scion scion
 cd scion
 echo 'export SC="go/src/github.com/joelfischerr/scion"' >> ~/.profile
 
