@@ -115,6 +115,7 @@ sudo curl --silent -L "https://github.com/docker/compose/releases/download/1.24.
 sudo chmod +x /usr/local/bin/docker-compose
 
 sudo usermod -a -G docker $LOGNAME
+sudo usermod -a -G docker vagrant
 
 
 
