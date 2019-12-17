@@ -148,6 +148,8 @@ echo 'Finished setup'
 
 echo 'You still have to run ./env/deps in scion'
 
+echo 'You also have to run sudo usermod -a -G docker $LOGNAME after login and then logout and login again.'
+
 # cd $SC
 
 # ./scion.sh topology
